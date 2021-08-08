@@ -8,7 +8,7 @@
 
 **注意** 本文档是对[英文版本README](./README.md)的翻译，仅供参考。更新可能不及时，以英文版本为准。
 
-EdgeBoard Lite (即FZ3) 是百度在2019年推出的一款嵌入式AI计算卡。作为百度EdgeBoard软硬件一体AI解决方案的一部分，它可以快速将神经网络部署到边缘计算和嵌入式场景。
+EdgeBoard Lite (即FZ3）是百度在2019年推出的一款嵌入式AI计算卡。作为百度EdgeBoard软硬件一体AI解决方案的一部分，它可以快速将神经网络部署到边缘计算和嵌入式场景。
 
 EdgeBoard Lite开发板基于Xilinx Zynq Ultrascale+ ZCU3EG MPSoC，可以达到1\~2 TOP/s的算力，平均功耗5\~10 W。它的外设包括：
 
@@ -34,9 +34,9 @@ EdgeBoard Lite开发板基于Xilinx Zynq Ultrascale+ ZCU3EG MPSoC，可以达到
 
 你可以在`./docs`文件夹中找到这些文档。
 
-- [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf) 来自ALINX。百度也提供了它的[在线版本](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121)。
-- [PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf) 来自ALINX
-- [IO Definition](./docs/FZ3A-io-definition.xls) 来自ALINX
+- [硬件手册](./docs/FZ3A-Hardware-Handbook.pdf) 来自ALINX。百度也提供了它的[在线版本](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121)。
+- [PCB电路原理图](./docs/FZ3A-Schematic.pdf) 来自ALINX
+- [IO引脚分配](./docs/FZ3A-io-definition.xls) 来自ALINX
 
 上述文档都来自于ALINX，这块开发板的制造商。
 

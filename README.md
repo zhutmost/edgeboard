@@ -34,7 +34,7 @@ Here are some documents you may need, and you can find them in the `./docs` fold
 
 - [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf) provided by ALINX. Its [online version](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121) can be also found on Baidu.
 - [PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf) provided by ALINX
-- [IO Definition](./docs/FZ3A-io-definition.xls) provided by ALINX
+- [IO pin assignment](./docs/FZ3A-io-definition.xls) provided by ALINX
 
 Most of above documents are from ALINX, the manufacturer of this board.
 
