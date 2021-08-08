@@ -34,12 +34,11 @@ Here are some documents you may need. It should be noted that most of them are i
 
 Most of below documents are from ALINX, the manufacturer of this board.
 
-- [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf) provided by ALINX
+- [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf) provided by ALINX. [Online version](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121)
 - [PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf) provided by ALINX
 - [IO Definition](./docs/FZ3A-io-definition.xls) provided by ALINX
 
-
-Documents about how to run EasyDL models on the EdgeBoard Lite will not be listed here. You can visit [its product website](https://aim.baidu.com/product/dbb5272f-aff2-42fc-8bbc-382a53ef2c90) to access them.
+Documents about how to run EasyDL models on the EdgeBoard Lite will not be listed here. You can visit [its product website](https://ai.baidu.com/ai-doc/HWCE/Yk3b86gvp) to access them.
 
 # Hardware Support Files
 
