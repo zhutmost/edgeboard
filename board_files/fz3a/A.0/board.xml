@@ -51,12 +51,30 @@
                         </port_map>
                     </port_maps>
                 </interface>
+                <interface mode="slave" name="pl_ref_clk" type="xilinx.com:signal:clock_rtl:1.0" of_component="pl_ref_clk" preset_proc="pl_ref_clk_preset">
+                    <preferred_ips>
+                        <preferred_ip vendor="xilinx.com" library="ip" name="clk_wiz" order="0"/>
+                    </preferred_ips>
+                    <port_maps>
+                        <port_map logical_port="CLK" physical_port="pl_ref_clk" dir="in">
+                            <pin_maps>
+                                <pin_map port_index="0" component_pin="pl_ref_clk"/> 
+                            </pin_maps>
+                        </port_map>
+                    </port_maps>
+                    <parameters>
+                        <parameter name="frequency" value="25000000" />
+                    </parameters>
+                </interface>
             </interfaces>
         </component>
         <!-- Descriptions of components that will appear in the IPI Board tab -->
         <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
         <component name="led" display_name="User Green LED" type="chip" sub_type="led" major_group="General Purpose Input or Output">
             <description>User Green LED (D5)</description>
+        </component>
+        <component name="pl_ref_clk" display_name="PL reference clock" type="chip" sub_type="system_clock" major_group="Clock Sources">
+            <description>PL Reference Clock, 25 MHz</description>
         </component>
     </components>
 
@@ -69,6 +87,9 @@
     <connections> <!-- Defines index alignment between <port_map> (above) and <pins> (part0_pins.xml) -->
         <connection name="part0_led" component1="part0" component2="led">
             <connection_map name="part0_led_map" c1_st_index="0" c1_end_index="0" c2_st_index="0" c2_end_index="0"/>
+        </connection>
+        <connection name="part0_pl_ref_clk" component1="part0" component2="pl_ref_clk">
+            <connection_map name="part0_pl_ref_clk_map" c1_st_index="1" c1_end_index="1" c2_st_index="0" c2_end_index="0"/>
         </connection>
     </connections>
 </board>

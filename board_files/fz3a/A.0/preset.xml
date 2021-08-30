@@ -374,7 +374,9 @@
 				<user_parameter name="CONFIG.PSU__USB0__PERIPHERAL__IO" value="MIO 52 .. 63" />
 				<user_parameter name="CONFIG.PSU__USB0__REF_CLK_FREQ" value="26" />
 				<user_parameter name="CONFIG.PSU__USB0__REF_CLK_SEL" value="Ref Clk1" />
-				<user_parameter name="CONFIG.PSU__USB0__RESET__ENABLE" value="0" />
+				<user_parameter name="CONFIG.PSU__USB0__RESET__ENABLE" value="1" />
+				<user_parameter name="CONFIG.PSU__USB__RESET__MODE" value="Shared MIO Pin" />
+				<user_parameter name="CONFIG.PSU__USB0__RESET__IO" value="MIO 44" /> 
 
 				<user_parameter name="CONFIG.PSU__USB1__RESET__ENABLE" value="0" />
 				<user_parameter name="CONFIG.PSU__USB2_0__EMIO__ENABLE" value="0" />
@@ -405,4 +407,19 @@
 		</ip>
 	</ip_preset>
 
+	<ip_preset preset_proc_name="pl_ref_clock_preset">
+    	<ip vendor="xilinx.com" library="ip" name="clk_wiz" ip_interface="clk_in1">
+        	<user_parameters>
+          		<user_parameter name="CONFIG.PRIM_IN_FREQ" value="25"/> 
+	  			<user_parameter name="CONFIG.PRIM_SOURCE" value="Single_ended_clock_capable_pin"/>
+        	</user_parameters>
+    	</ip>
+    	<ip vendor="xilinx.com" library="ip" name="clk_wiz" ip_interface="clk_in2">
+        	<user_parameters>
+        		<user_parameter name="CONFIG.USE_INCLK_SWITCHOVER" value="true"/>
+        		<user_parameter name="CONFIG.SECONDARY_IN_FREQ" value="25"/>
+				<user_parameter name="CONFIG.SECONDARY_SOURCE" value="Single_ended_clock_capable_pin"/>
+        	</user_parameters>
+    	</ip>
+  	</ip_preset>
 </ip_presets>
