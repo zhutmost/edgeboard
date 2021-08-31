@@ -32,24 +32,32 @@ This repository contains materials that help us use EdgeBoard as a general Ultra
 
 Here are some documents you may need, and you can find them in the `./docs` folder. It should be noted that most of them are in Chinese, and currently do not have an English translation.
 
-- [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf) provided by ALINX. Its [online version](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121) can be also found on Baidu.
-- [PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf) provided by ALINX
-- [IO pin assignment](./docs/FZ3A-io-definition.xls) provided by ALINX
+- [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf), provided by ALINX. Its [online version](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121) can be also found on Baidu.
+- [PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf), provided by ALINX
+- [IO pin assignment](./docs/FZ3A-io-definition.xls), provided by ALINX
 
 Most of above documents are from ALINX, the manufacturer of this board.
 
 Documents about how to run EasyDL/PaddlePaddle models on the EdgeBoard Lite will not be listed here. You can visit [its product website](https://ai.baidu.com/ai-doc/HWCE/Yk3b86gvp) to access them.
 
-## Hardware Support Files
+## Board Files & PYNQ Image
 
-I plan to port the PYNQ framework to EdgeBoard Lite, and provide the image file as well as necessary support files, such as BSP files and Vivado board files.
+I have ported the PYNQ framework to EdgeBoard Lite, and provide the prebuilt image file.
+All the necessary source code are also open sourced.
 
-Work is still in progress, so far only the Vivado board files can be provided.
+### Vivado board files
 
-- [Vivado board files](./board_files) by myself
-- BSP file
-- PYNQ image file
+They are in `./board_files`. Please read [its inside README](./board_files/README.md) for more details.
+
+### PYNQ image file
+
+The prebuilt image file is compiled based on PYNQ v2.7.
+Because it is too large (~10GB, exceed the GitHub limit), I put it on [DropBox](https://www.dropbox.com/sh/70tug0pgq4mj3nb/AABhfFUUvjc61jF9WbT-szFka?dl=0).
+
+The folder `./pynq` is board specification files, which are necessary for PYNQ compilation. If you want to build from scratch, you can read [this post on my blog](https://zhutmost.com/uncategorized/pynq-compile) (sorry that it is in Chinese).
 
 ## License
 
 Except for those already noted in the text, other documents written by myself are released under the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and the code is released under the [MIT](./LICENSE) license.
+
+This repository is created and maintained by me personally and has nothing to do with Baidu.

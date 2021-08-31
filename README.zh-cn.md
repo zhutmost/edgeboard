@@ -34,9 +34,9 @@ EdgeBoard Lite开发板基于Xilinx Zynq Ultrascale+ ZCU3EG MPSoC，可以达到
 
 你可以在`./docs`文件夹中找到这些文档。
 
-- [硬件手册](./docs/FZ3A-Hardware-Handbook.pdf) 来自ALINX。百度也提供了它的[在线版本](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121)。
-- [PCB电路原理图](./docs/FZ3A-Schematic.pdf) 来自ALINX
-- [IO引脚分配](./docs/FZ3A-io-definition.xls) 来自ALINX
+- [硬件手册](./docs/FZ3A-Hardware-Handbook.pdf)。百度也提供了它的[在线版本](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121)。
+- [PCB电路原理图](./docs/FZ3A-Schematic.pdf)
+- [IO引脚分配](./docs/FZ3A-io-definition.xls)
 
 上述文档都来自于ALINX，这块开发板的制造商。
 
@@ -44,14 +44,21 @@ EdgeBoard Lite开发板基于Xilinx Zynq Ultrascale+ ZCU3EG MPSoC，可以达到
 
 ## 硬件开发相关
 
-我计划移植PYNQ框架到EdgeBoard Lite开发板上，并提供镜像文件和其他必要的支持文件（例如BSP文件和Vivado的开发板配置文件）。
+我已完成PYNQ框架到EdgeBoard Lite开发板的移植，并提供镜像文件的下载。
+同时，我也一并提供了所需要的各种源代码。
 
-此工作尚未完成，因此目前仅能提供Vivado的配置文件（即Board files）。
+### Vivado board files
 
-- [Vivado board files](./board_files)
-- BSP file
-- PYNQ image file
+它们在`./board_files`路径下。你可以阅读[其中的README文件](./board_files/README.md)了解更多内容。
 
-## 转载许可
+### PYNQ镜像
+
+该预编译的镜像文件基于PYNQ v2.7制作。因为它的容量（约10GB）超出了GitHub上传文件的上限，我将它放在了DropBox上。这是[下载链接](https://www.dropbox.com/sh/70tug0pgq4mj3nb/AABhfFUUvjc61jF9WbT-szFka?dl=0)。
+
+文件夹`./pynq`是编译PYNQ所需的开发板配置文件。如果你需要自己重头编译PYNQ，你可以阅读[我的博客文章](https://zhutmost.com/uncategorized/pynq-compile)。
+
+## 转载许可与声明
 
 除非文中注明，本仓库下所有文档均以[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)协议发布。如需转载，请按照License的指示进行。所有的代码均以[MIT](./LICENSE)协议发布。
+
+这个项目是我的个人项目，与Baidu官方没有任何关系。
