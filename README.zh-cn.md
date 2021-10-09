@@ -53,7 +53,7 @@ EdgeBoard Lite开发板基于Xilinx Zynq Ultrascale+ ZCU3EG MPSoC，可以达到
 
 ### PYNQ镜像
 
-该预编译的镜像文件基于PYNQ v2.7制作。因为它的容量（约10GB）超出了GitHub上传文件的上限，我将它放在了DropBox上。这是[下载链接](https://www.dropbox.com/sh/70tug0pgq4mj3nb/AABhfFUUvjc61jF9WbT-szFka?dl=0)。
+该预编译的镜像文件基于PYNQ v2.7制作。因为它的容量（约10GB）超出了GitHub上传文件的上限，我将它放在了阿里云盘上。这是[下载链接](https://www.aliyundrive.com/s/6biJpMiKrpD)。
 
 文件夹`./pynq`是编译PYNQ所需的开发板配置文件。如果你需要自己重头编译PYNQ，你可以阅读[我的博客文章](https://zhutmost.com/uncategorized/pynq-compile)。
 

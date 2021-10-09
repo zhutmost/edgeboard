@@ -52,7 +52,7 @@ They are in `./board_files`. Please read [its inside README](./board_files/READM
 ### PYNQ image file
 
 The prebuilt image file is compiled based on PYNQ v2.7.
-Because it is too large (~10GB, exceed the GitHub limit), I put it on [DropBox](https://www.dropbox.com/sh/70tug0pgq4mj3nb/AABhfFUUvjc61jF9WbT-szFka?dl=0).
+Because it is too large (~10GB, exceed the GitHub limit), I put it on [Aliyun Cloud Drive](https://www.aliyundrive.com/s/6biJpMiKrpD).
 
 The folder `./pynq` is board specification files, which are necessary for PYNQ compilation. If you want to build from scratch, you can read [this post on my blog](https://zhutmost.com/uncategorized/pynq-compile) (sorry that it is in Chinese).
 
