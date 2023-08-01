@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<board schema_version="2.1" vendor="baidu.com" name="fz3a" display_name="EdgeBoard Lite FZ3B Board" url="https://github.com/zhutmost/edgeboard" preset_file="preset.xml">
+    <images>
+        <image name="fz3a_board.jpeg" display_name="EdgeBoard Lite FZ3B Board" sub_type="board">
+            <description>FZ3A Board File Image</description>
+        </image>
+    </images>
+    <compatible_board_revisions>
+        <revision id="0">2019.11.29</revision>
+    </compatible_board_revisions>
+    <file_version>1.0</file_version>
+    <description>EdgeBoard Lite FZ3B Board</description>
+    <parameters>
+        <parameter name="heat_sink_type" value="medium" value_type="string" />
+        <parameter name="heat_sink_temperature" value_type="range" value_min="20.0" value_max="30.0" />
+    </parameters>
+    <jumpers>
+        <jumper name="SW3_1" default_value="false">
+            <description>Boot mode selection(4->1): 0000 -> PS JTAG, 0001 -> Quad SPI, 0101 -> SD1, 0110 -> eMMC</description>
+        </jumper>
+        <jumper name="SW3_2" default_value="true">
+            <description>Boot mode selection(4->1): 0000 -> PS JTAG, 0001 -> Quad SPI, 0101 -> SD1, 0110 -> eMMC</description>
+        </jumper>
+        <jumper name="SW3_3" default_value="false">
+            <description>Boot mode selection(4->1): 0000 -> PS JTAG, 0001 -> Quad SPI, 0101 -> SD1, 0110 -> eMMC</description>
+        </jumper>
+        <jumper name="SW3_4" default_value="true">
+            <description>Boot mode selection(4->1): 0000 -> PS JTAG, 0001 -> Quad SPI, 0101 -> SD1, 0110 -> eMMC</description>
+        </jumper>
+    </jumpers>
+
+    <components>
+        <component name="part0" display_name="EdgeBoard Lite FZ3B Board" type="fpga" part_name="xczu3eg-sfvc784-1-i" pin_map_file="part0_pins.xml" vendor="xilinx" spec_url="https://github.com/zhutmost/edgeboard">
+            <description>FPGA part on the board</description>
+            <interfaces>
+                <interface mode="master" name="ps8_fixedio" type="xilinx.com:zynq_ultra_ps_e:fixedio_rtl:1.0" of_component="ps8_fixedio" preset_proc="zynq_ultra_ps_e_preset">
+                    <preferred_ips>
+                        <preferred_ip vendor="xilinx.com" library="ip" name="zynq_ultra_ps_e" order="0"/>
+                    </preferred_ips>
+                </interface>
+                <interface mode="master" name="led" type="xilinx.com:interface:gpio_rtl:1.0" of_component="led" preset_proc="led_preset">
+                    <description>User Green LED (D5)</description>
+                    <preferred_ips>
+                        <preferred_ip vendor="xilinx.com" library="ip" name="axi_gpio" order="0"/>
+                    </preferred_ips>
+                    <port_maps>
+                        <port_map logical_port="TRI_O" physical_port="pl_led" dir="out">
+                            <pin_maps>
+                                <pin_map port_index="0" component_pin="pl_led"/>
+                            </pin_maps>
+                        </port_map>
+                    </port_maps>
+                </interface>
+                <interface mode="slave" name="pl_ref_clk" type="xilinx.com:signal:clock_rtl:1.0" of_component="pl_ref_clk" preset_proc="pl_ref_clk_preset">
+                    <preferred_ips>
+                        <preferred_ip vendor="xilinx.com" library="ip" name="clk_wiz" order="0"/>
+                    </preferred_ips>
+                    <port_maps>
+                        <port_map logical_port="CLK" physical_port="pl_ref_clk" dir="in">
+                            <pin_maps>
+                                <pin_map port_index="0" component_pin="pl_ref_clk"/> 
+                            </pin_maps>
+                        </port_map>
+                    </port_maps>
+                    <parameters>
+                        <parameter name="frequency" value="25000000" />
+                    </parameters>
+                </interface>
+            </interfaces>
+        </component>
+        <!-- Descriptions of components that will appear in the IPI Board tab -->
+        <component name="ps8_fixedio" display_name="PS8 fixed IO" type="chip" sub_type="fixed_io" major_group=""/>
+        <component name="led" display_name="User Green LED" type="chip" sub_type="led" major_group="General Purpose Input or Output">
+            <description>User Green LED (D5)</description>
+        </component>
+        <component name="pl_ref_clk" display_name="PL reference clock" type="chip" sub_type="system_clock" major_group="Clock Sources">
+            <description>PL Reference Clock, 25 MHz</description>
+        </component>
+    </components>
+
+    <jtag_chains>
+        <jtag_chain name="chain1">
+            <position name="0" component="part0" />
+        </jtag_chain>
+    </jtag_chains>
+
+    <connections> <!-- Defines index alignment between <port_map> (above) and <pins> (part0_pins.xml) -->
+        <connection name="part0_led" component1="part0" component2="led">
+            <connection_map name="part0_led_map" c1_st_index="0" c1_end_index="0" c2_st_index="0" c2_end_index="0"/>
+        </connection>
+        <connection name="part0_pl_ref_clk" component1="part0" component2="pl_ref_clk">
+            <connection_map name="part0_pl_ref_clk_map" c1_st_index="1" c1_end_index="1" c2_st_index="0" c2_end_index="0"/>
+        </connection>
+    </connections>
+</board>

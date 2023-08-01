@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<part_info part_name="xczu3eg-sfvc784-1-i">
+    <pins>
+        <pin index="0" name="pl_led" iostandard="LVCMOS33" loc="A10"/> <!--Sch=IO_L10N_25-->
+        <pin index="1" name="pl_ref_clk" iostandard="LVCMOS18" loc="D4"/> <!--Sch=IO_L11P_66-->
+    </pins>
+</part_info>
