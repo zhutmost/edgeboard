@@ -57,7 +57,7 @@ The images are put on Aliyun Cloud Drive:
 - FZ3A: [Link](https://www.aliyundrive.com/s/6biJpMiKrpD),
 - FZ3B: [Link](https://www.aliyundrive.com/s/J8SkxVZ6Mrw) (thanks to [@changhai0109](https://github.com/changhai0109))
 
-The folder `./pynq` is board specification files, which are necessary for PYNQ compilation. If you want to build from scratch, you can read [this post on my blog](https://zhutmost.com/uncategorized/pynq-compile) (sorry that it is in Chinese).
+The folder `./pynq` is board specification files, which are necessary for PYNQ compilation. If you want to build from scratch, you can read [this post on my blog](https://zhutmost.com/Engineering/pynq-compile) (sorry that it is in Chinese).
 
 ## License
 
