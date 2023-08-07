@@ -10,7 +10,7 @@ EdgeBoard Lite (a.k.a. FZ3) is an FPGA-accelerated embedded AI computing board, 
 
 The board is based on Xilinx Zynq Ultrascale+ ZCU3EG MPSoC, which can achieve 1\~2 TOP/s with an average power of 5\~10 W. It also has the following peripherals:
 
-- 2GB DDR4 RAM
+- 2GB/4GB DDR4 RAM
 - 8GB eMMC Flash
 - 256Mb QSPI Flash
 - PCIe x1 connector
@@ -32,9 +32,10 @@ This repository contains materials that help us use EdgeBoard as a general Ultra
 
 Here are some documents you may need, and you can find them in the `./docs` folder. It should be noted that most of them are in Chinese, and currently do not have an English translation.
 
-- [Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf), provided by ALINX. Its [online version](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121) can be also found on Baidu.
-- [PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf), provided by ALINX
-- [IO pin assignment](./docs/FZ3A-io-definition.xls), provided by ALINX
+- [FZ3A Hardware handbook](./docs/FZ3A-Hardware-Handbook.pdf), provided by ALINX. Its [online version](https://ai.baidu.com/ai-doc/HWCE/8kq9b2121) can be also found on Baidu.
+- [FZ3B Hardware handbook](./docs/FZ3B-Hardware-Handbook.pdf), provided by ALINX. Its [online version](https://ai.baidu.com/ai-doc/HWCE/nkq9b5ncu) can be also found on Baidu.
+- [FZ3A PCB-level circuit schematic](./docs/FZ3A-Schematic.pdf), provided by ALINX
+- [FZ3A IO pin assignment](./docs/FZ3A-io-definition.xls), provided by ALINX
 
 Most of above documents are from ALINX, the manufacturer of this board.
 
@@ -51,8 +52,10 @@ They are in `./board_files`. Please read [its inside README](./board_files/READM
 
 ### PYNQ image file
 
-The prebuilt image file is compiled based on PYNQ v2.7.
-Because it is too large (~10GB, exceed the GitHub limit), I put it on [Aliyun Cloud Drive](https://www.aliyundrive.com/s/6biJpMiKrpD).
+The prebuilt image files are compiled based on PYNQ v2.7.
+The images are put on Aliyun Cloud Drive:
+- FZ3A: [Link](https://www.aliyundrive.com/s/6biJpMiKrpD),
+- FZ3B: [Link](https://www.aliyundrive.com/s/J8SkxVZ6Mrw) (thanks to [@changhai0109](https://github.com/changhai0109))
 
 The folder `./pynq` is board specification files, which are necessary for PYNQ compilation. If you want to build from scratch, you can read [this post on my blog](https://zhutmost.com/uncategorized/pynq-compile) (sorry that it is in Chinese).
 
@@ -61,3 +64,10 @@ The folder `./pynq` is board specification files, which are necessary for PYNQ c
 Except for those already noted in the text, other documents written by myself are released under the [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/) and the code is released under the [MIT](./LICENSE) license.
 
 This repository is created and maintained by me personally and has nothing to do with Baidu.
+
+## Contributors
+
+- [@zhutmost](https://github.com/zhutmost) created this repository.
+- [@changhai0109](https://github.com/changhai0109) contributes the FZ3B compilation flow.
+
+Thank them for their contributions.
